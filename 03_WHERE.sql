@@ -249,3 +249,4 @@ from
 where
     ref_category_code is not null;
 -- ref_category_code가 null이 아닌 것들만 출력
+
