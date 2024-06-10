@@ -47,7 +47,7 @@ from
     tbl_menu
 where
    -- orderable_status != 'Y'
-    orderable_status <> 'Y'
+    orderable_status <> 'Y';
 
 -- 대소 비교 연산자(> , >=, < , <=)를 사용하는 WHERE
 select
@@ -222,7 +222,7 @@ select
 from
     tbl_menu
 where
-    category_code not in (4,5,6)
+    category_code not in (4,5,6);
 -- 카테고리 코드가 (4,5,6) 목록 중에 없는 데이터만 조회해줘
 
 /*
