@@ -164,7 +164,7 @@ where
             tbl_menu b
         where
             b.category_code= a.category_code
-    )
+    );
 
 -- 스칼라 서브쿼리
 -- 결과값이 1개인 서브쿼리, 주로 select문에서 사용된다,
