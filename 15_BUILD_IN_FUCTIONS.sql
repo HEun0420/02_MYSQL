@@ -132,15 +132,15 @@ select sign(10.1), sign(0), sign(-10,1);
 select truncate(12345.2) , truncate(12345.23456, -2);
 
 -- 날짜 및 시간 관련 함수
--- adddate (날짜,차이): 날짜를 기준으로 차이를 더함
--- subdate(날짜 차이) : 날짜를 기준으로 차이를 뻄
-select adddate('2024-6-13', interval 30 day), adddate('2024_06-13', interval 6 month);
-select subdate('2024-6-13', interval 30 day), subdate('2024_06-13', interval 6 month);
+-- ADDDATE(날짜, 차이) : 날짜를 기준으로 차이를 더함
+-- SUBDATE(날짜, 차이) : 날짜를 기준으로 차이를 뺌
+select adddate('2024-06-13', interval 30 day), adddate('2024-06-13', interval 6 month);
+select subdate('2024-06-13', interval 30 day), subdate('2024-06-13', interval 6 month);
 
--- addtime(날짜/시간, 시간) : 날짜/시간을 기준으로 시간을 더함
--- subtime(날짜/시간, 시간) : 날짜/시간을 기준으로 시간을 뺌
-select addtime('2024-6-13', '12:00:00', '1:0:1'), subtime('2024_06-13', '12:00:00', '1:0:1');
 
+-- ADDTIME(날짜/시간, 시간) : 날짜/시간을 기준으로 시간을 더함
+-- SUBTIME(날짜/시간, 시간) : 날짜/시간을 기준으로 시간을 뺌
+select addtime('2024-06-13 12:00:00', '1:0:1'), subtime('2024-06-13 12:00:00', '1:0:1');
 -- 현재 연-월-일 시간-분-초 반환해주는 함수들
 -- curdate(): 2024-06-13
 -- curtime():12:03:26
